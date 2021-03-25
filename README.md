@@ -30,11 +30,11 @@ python chinese_t2s.py -i corpus.zhwiki.txt -o corpus.zhwiki.simplified.txt
 ```
 * 得到简体中文的Wiki语料库```corpus.zhwiki.simplified.txt```。
 
-### 2.3 去除英文和空格
+### 2.3 去除英文和空格,只保留汉字
 * 现在得到的语料库中有许多英文（也有些许日文、德文等），为避免影响所训练的词向量效果，我们将其中的英文以及空格做了删除（其他日文、德文等后续有时间再进行处理），具体可参见脚本[remove_en_blank.py](https://github.com/lzhenboy/word2vec-Chinese/blob/master/remove_en_blank.py)。<br>
 执行以下命令可以将语料库中的英文以及空格删除：<br>
 ```python
-python remove_en_blank.py -i corpus.zhwiki.simplified.txt -o corpus.zhwiki.simplified.done.txt
+python only_hanzi.py -i corpus.zhwiki.simplified.txt -o corpus.zhwiki.simplified.done.txt
 ```
 * 得到去除英文和空格的中文语料库```corpus.zhwiki.simplified.done.txt```。
 
